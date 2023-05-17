@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 
 import { Game } from './components/Game';
 
-const randomSum = () => {
-  return ''.concat(Math.round(Math.random() * 20), '+', Math.round(Math.random() * 20));
+const randomOp = operator => {
+  return ''.concat(Math.round(Math.random() * 20), operator, Math.round(Math.random() * 20));
 };
 
 
 export const App = props => {
   const [gameOn, setGameOn] = useState(false);
-  const [question, setQuestion] = useState(randomSum());
+  const [question, setQuestion] = useState(randomOp('+'));
   const [userInput, setUserInput] = useState('');
 
   const rightAnswer = (question, userInput) => {
     const newQuestion = question;
     if (eval(question) === parseInt(userInput)) {
       setTimeout(() => {
-        setQuestion(randomSum());
+        setQuestion(randomOp('+'));
         setUserInput('');
         document.getElementById('answer').value = '';
       }, 500);
