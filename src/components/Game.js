@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 export const Game = props => {
-  console.log(props);
 
   const updateInput = (e, setUserInput) => {
     const input = e.target.value;
