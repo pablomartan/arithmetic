@@ -12,17 +12,17 @@ export const Question = () => {
     setUserInput(e.target.value);
   };
 
-  const checkAnswer = (question, answer) => {
-    if (eval(question) === parseInt(answer)) {
-      setTimeout(() => {
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      if (eval(question) === parseInt(userInput)) {
         setQuestion(randomOp('+'));
         setUserInput('');
         document.getElementById('answer').value = '';
-      }, 300);
-    }
-  };
+      }
+    }, 300);
 
-  useEffect(() => checkAnswer(question, userInput));
+    return () => clearTimeout(timeOut);
+  });
 
   return(
     <>
