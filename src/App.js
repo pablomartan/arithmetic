@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Game } from './components/Game';
 
-export const App = props => {
+export const App = () => {
   const [gameOn, setGameOn] = useState(false);
   
   return(
