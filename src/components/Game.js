@@ -30,7 +30,9 @@ export const Game = () => {
 
   return(
     <div className="game">
-      <button id="start-button" onClick={() => setGameOn(!gameOn)}>{gameOn ? 'Stop' : 'Start'}</button>
+      <button id="start-button" onClick={() => setGameOn(!gameOn)}>
+        {gameOn ? 'Stop' : 'Start'}
+      </button>
       <p id="question">{rightAnswer(question, userInput)}</p>
       <input id="answer" onChange={e => setUserInput(e.target.value)} />
     </div>
