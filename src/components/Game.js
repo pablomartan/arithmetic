@@ -44,7 +44,7 @@ export const Game = () => {
       <button id="start-button" onClick={() => startStopButton()}>
         {gameOn ? 'Stop' : 'Start'}
       </button>
-      {gameOn ? <Question /> : null}
+      {gameOn ? <Question ops={operators} /> : null}
     </div>
   );
 };
