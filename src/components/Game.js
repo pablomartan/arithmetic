@@ -4,7 +4,7 @@ const randomOp = operator => {
   return ''.concat(Math.round(Math.random() * 20), operator, Math.round(Math.random() * 20));
 };
 
-export const Game = props => {
+export const Game = () => {
   const [question, setQuestion] = useState(randomOp('+'));
   const [userInput, setUserInput] = useState('');
 
