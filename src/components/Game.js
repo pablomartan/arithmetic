@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 import { Question } from './Question';
+import { Settings } from './Settings';
 
 export const Game = () => {
   const [gameOn, setGameOn] = useState(false);
   const [timer, setTimer] = useState(null);
   const [timeLeft, setTimeLeft] = useState(300);
+  const [operators, setOperators] = useState(['+']);
 
   const startStopButton = () => {
     if (!gameOn) {
@@ -30,7 +32,6 @@ export const Game = () => {
   };
 
   useEffect(() => {
-    console.log(timer, timeLeft);
     if (timeLeft <= 0) {
       stopGame();
     }
@@ -39,6 +40,7 @@ export const Game = () => {
   return(
     <div className="game">
       <h2>{timeLeft}</h2>
+      <Settings operators={operators} setOperators={setOperators} setTimeLeft={setTimeLeft} />
       <button id="start-button" onClick={() => startStopButton()}>
         {gameOn ? 'Stop' : 'Start'}
       </button>
