@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const randomOp = operator => {
-  return ''.concat(Math.round(Math.random() * 20), operator, Math.round(Math.random() * 20));
+const randomOp = operatorArray => {
+  const op = operatorArray[Math.floor(Math.random() * operatorArray.length)];
+  return ''.concat(Math.round(Math.random() * 20), op, Math.round(Math.random() * 20));
 };
 
-export const Question = () => {
-  const [question, setQuestion] = useState(randomOp('+'));
+export const Question = props => {
+  const [question, setQuestion] = useState(randomOp(props.ops));
   const [userInput, setUserInput] = useState('');
 
   const handleInput = e => {
@@ -15,7 +16,7 @@ export const Question = () => {
   useEffect(() => {
     const timeOut = setTimeout(() => {
       if (eval(question) === parseInt(userInput)) {
-        setQuestion(randomOp('+'));
+        setQuestion(randomOp(props.ops));
         setUserInput('');
         document.getElementById('answer').value = '';
       }
