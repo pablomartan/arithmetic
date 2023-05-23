@@ -21,38 +21,41 @@ export const Settings = props => {
 
   return(
     <>
-      <input
-        type="checkbox"
-        name="sum-check"
-        id="+"
-        onClick={e => operatorCheckBoxHandler(e)}
-        defaultChecked
-      />
-      <label htmlFor="sum-check">Addition</label>
-      
-      <input
-        type="checkbox"
-        name="sub-check"
-        id="-"
-        onClick={e => operatorCheckBoxHandler(e)}
-      />
-      <label htmlFor="sub-check">Subtraction</label>
+      <fieldset>
+        <legend>Choose operations</legend>
+        <input
+          type="checkbox"
+          name="sum-check"
+          id="+"
+          onClick={e => operatorCheckBoxHandler(e)}
+          defaultChecked
+        />
+        <label htmlFor="sum-check">Addition</label>
+        
+        <input
+          type="checkbox"
+          name="sub-check"
+          id="-"
+          onClick={e => operatorCheckBoxHandler(e)}
+        />
+        <label htmlFor="sub-check">Subtraction</label>
 
-      <input
-        type="checkbox"
-        name="div-check"
-        id="/"
-        onClick={e => operatorCheckBoxHandler(e)}
-      />
-      <label htmlFor="div-check">Division</label>
+        <input
+          type="checkbox"
+          name="div-check"
+          id="/"
+          onClick={e => operatorCheckBoxHandler(e)}
+        />
+        <label htmlFor="div-check">Division</label>
 
-      <input
-        type="checkbox"
-        name="mult-check"
-        id="*"
-        onClick={e => operatorCheckBoxHandler(e)}
-      />
-      <label htmlFor="sub-check">Multiplication</label>
+        <input
+          type="checkbox"
+          name="mult-check"
+          id="*"
+          onClick={e => operatorCheckBoxHandler(e)}
+        />
+        <label htmlFor="sub-check">Multiplication</label>
+      </fieldset>
     </>
   );
 };
