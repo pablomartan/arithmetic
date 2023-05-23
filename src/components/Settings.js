@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Settings = props => {
-  const setTime = props.setTimeLeft;
+  const setTime = props.setTime;
   const opArr = props.operators;
   const setOps = props.setOperators;
 
@@ -17,6 +17,13 @@ export const Settings = props => {
     const target = e.target;
     const op = target.id;
     target.checked ? addOperator(op) : rmOperator(op);
+  };
+
+  const updateTime = time => {
+    const split = time.split(':');
+    const sec = parseInt(split[0]) * 60 + parseInt(split[1]);
+    console.log(sec);
+    setTime(sec);
   };
 
   return(
@@ -56,6 +63,15 @@ export const Settings = props => {
         />
         <label htmlFor="sub-check">Multiplication</label>
       </fieldset>
+      <input
+        type="time"
+        label="time-setting"
+        id="time-setting"
+      />
+      <button onClick={() => {
+        const time = document.getElementById('time-setting').value;
+        updateTime(time);
+      }}>Set time</button>
     </>
   );
 };

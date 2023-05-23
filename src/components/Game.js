@@ -7,11 +7,12 @@ import { Timer } from './Timer';
 export const Game = () => {
   const [gameOn, setGameOn] = useState(false);
   const [operators, setOperators] = useState(['+']);
+  const [time, setTime] = useState(300);
 
   return(
     <div className="game">
-      <Timer gameOn={gameOn} setGameOn={setGameOn} />
-      <Settings operators={operators} setOperators={setOperators} />
+      <Timer gameOn={gameOn} setGameOn={setGameOn} time={time} key={time} />
+      <Settings operators={operators} setOperators={setOperators} setTime={setTime} />
       <button id="start-button" onClick={() => setGameOn(!gameOn)}>
         {gameOn ? 'Stop' : 'Start'}
       </button>

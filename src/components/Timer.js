@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export const Timer = props => {
   const [gameOn, setGameOn] = [props.gameOn, props.setGameOn];
-  const [timeLeft, setTimeLeft] = useState(300);
+  const [timeLeft, setTimeLeft] = useState(props.time);
 
   useEffect(() => {
     const interval = setInterval(() => {
