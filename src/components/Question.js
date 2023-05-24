@@ -2,7 +2,16 @@ import React, { useState, useEffect } from 'react';
 
 const randomOp = operatorArray => {
   const op = operatorArray[Math.floor(Math.random() * operatorArray.length)];
-  return ''.concat(Math.round(Math.random() * 20), op, Math.round(Math.random() * 20));
+  const a = Math.round(Math.random() * 20);
+  const b = Math.round(Math.random() * 20);
+ 
+  /*
+   * took idea for division (reversed multiplication) from this webapp:
+   * https://arithmetic.zetamac.com/
+   */
+  return op === '/' ? ''.concat(a*b, op, b)
+                    : op === '-' && a < b ? ''.concat(b, op, a)
+                    : ''.concat(a, op, b)
 };
 
 export const Question = props => {
