@@ -17,7 +17,7 @@ export const Timer = props => {
   });
 
   const timeInMinutes = time => {
-    let mins = Math.round(time / 60);
+    let mins = Math.floor(time / 60);
     let sec = Math.round(time % 60);
     
     return (mins < 10 ? '0'.concat(mins) : mins)
