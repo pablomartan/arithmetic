@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 const randomOp = operatorArray => {
   const op = operatorArray[Math.floor(Math.random() * operatorArray.length)];
-  const a = Math.round(Math.random() * 20);
-  const b = Math.round(Math.random() * 20);
+  const a = Math.round(Math.random() * 19) + 1;
+  const b = Math.round(Math.random() * 19) + 1;
  
   /*
    * took idea for division (reversed multiplication) from this webapp:
