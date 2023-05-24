@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-const randomOp = operatorArray => {
+const randomOp = (operatorArray, max) => {
   const op = operatorArray[Math.floor(Math.random() * operatorArray.length)];
-  const a = Math.round(Math.random() * 19) + 1;
-  const b = Math.round(Math.random() * 19) + 1;
+  const a = Math.round(Math.random() * (max - 1)) + 1;
+  const b = Math.round(Math.random() * (max - 1)) + 1;
  
   /*
    * took idea for division (reversed multiplication) from this webapp:
@@ -15,7 +15,7 @@ const randomOp = operatorArray => {
 };
 
 export const Question = props => {
-  const [question, setQuestion] = useState(randomOp(props.ops));
+  const [question, setQuestion] = useState(randomOp(props.ops, 20));
   const [userInput, setUserInput] = useState('');
 
   const handleInput = e => {
@@ -25,7 +25,7 @@ export const Question = props => {
   useEffect(() => {
     const timeOut = setTimeout(() => {
       if (eval(question) === parseInt(userInput)) {
-        setQuestion(randomOp(props.ops));
+        setQuestion(randomOp(props.ops, 20));
         setUserInput('');
         document.getElementById('answer').value = '';
       }
