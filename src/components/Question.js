@@ -15,17 +15,19 @@ const randomOp = (operatorArray, max) => {
 };
 
 export const Question = props => {
-  const [question, setQuestion] = useState(randomOp(props.ops, 20));
+  const [question, setQuestion] = useState(randomOp(props.ops, props.max));
   const [userInput, setUserInput] = useState('');
 
   const handleInput = e => {
     setUserInput(e.target.value);
   };
 
+  console.log(props.max);
+
   useEffect(() => {
     const timeOut = setTimeout(() => {
       if (eval(question) === parseInt(userInput)) {
-        setQuestion(randomOp(props.ops, 20));
+        setQuestion(randomOp(props.ops, props.max));
         setUserInput('');
         document.getElementById('answer').value = '';
       }

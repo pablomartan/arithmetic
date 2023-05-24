@@ -1,6 +1,7 @@
 import React from 'react';
 
 export const Settings = props => {
+  const setMax = props.setMax;
   const setTime = props.setTime;
   const opArr = props.operators;
   const setOps = props.setOperators;
@@ -10,7 +11,7 @@ export const Settings = props => {
   };
 
   const rmOperator = op => {
-    !opArr.includes(op) ? null : setOps(opArr.filter(o => o === op));
+    !opArr.includes(op) ? null : setOps(opArr.filter(o => o !== op));
   };
 
   const operatorCheckBoxHandler = e => {
@@ -63,15 +64,23 @@ export const Settings = props => {
         />
         <label htmlFor="sub-check">Multiplication</label>
       </fieldset>
+
       <input
         type="time"
         label="time-setting"
         id="time-setting"
       />
+
       <button onClick={() => {
         const time = document.getElementById('time-setting').value;
         updateTime(time);
       }}>Set time</button>
+
+      <input id="max-setting" />
+      <button onClick={() => {
+        const max = document.getElementById('max').value;
+        setMax(max);
+      }}>Set max. value</button>
     </>
   );
 };
