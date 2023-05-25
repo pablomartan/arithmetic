@@ -17,6 +17,7 @@ const randomOp = (operatorArray, max) => {
 export const Question = props => {
   const [question, setQuestion] = useState(randomOp(props.ops, props.max));
   const [userInput, setUserInput] = useState('');
+  const [score, setScore] = [props.score, props.setScore];
 
   const handleInput = e => {
     setUserInput(e.target.value);
@@ -30,6 +31,7 @@ export const Question = props => {
         setQuestion(randomOp(props.ops, props.max));
         setUserInput('');
         document.getElementById('answer').value = '';
+        setScore(score => score + 1);
       }
     }, 300);
 

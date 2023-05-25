@@ -9,6 +9,7 @@ export const Game = () => {
   const [operators, setOperators] = useState(['+']);
   const [time, setTime] = useState(300);
   const [max, setMax] = useState(20);
+  const [score, setScore] = useState(0);
 
   const disableInputs = () => {
     const inputs = Array.from(document.getElementsByClassName('settings'));
@@ -25,11 +26,12 @@ export const Game = () => {
     <div className="game">
       <Timer gameOn={gameOn} setGameOn={setGameOn} time={time} key={time} />
       <h3>Max. value: {max}</h3>
+      <h3>Your score: {score}</h3>
       <Settings operators={operators} setOperators={setOperators} setTime={setTime} setMax={setMax} key={max} />
       <button id="start-button" onClick={() => setGameOn(!gameOn)}>
         {gameOn ? 'Stop' : 'Start'}
       </button>
-      {gameOn ? <Question ops={operators} max={max} /> : null}
+      {gameOn ? <Question ops={operators} max={max} score={score} setScore={setScore} /> : null}
     </div>
   );
 };
