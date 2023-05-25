@@ -86,7 +86,7 @@ export const Settings = props => {
         id="max-setting"
       />
       <button onClick={() => {
-        const max = document.getElementById('max').value;
+        const max = document.getElementById('max-setting').value;
         setMax(max);
       }}>Set max. value</button>
     </>
