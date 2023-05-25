@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Question } from './Question';
 import { Settings } from './Settings';
@@ -9,6 +9,17 @@ export const Game = () => {
   const [operators, setOperators] = useState(['+']);
   const [time, setTime] = useState(300);
   const [max, setMax] = useState(20);
+
+  const disableInputs = () => {
+    const inputs = Array.from(document.getElementsByTagName('input'));
+    if (gameOn) {
+      inputs.forEach(i => i.disabled = true);
+    } else {
+      inputs.forEach(i => i.disabled = false);
+    }
+  };
+
+  useEffect(() => disableInputs());
 
   return(
     <div className="game">
