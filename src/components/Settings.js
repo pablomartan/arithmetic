@@ -32,6 +32,7 @@ export const Settings = props => {
       <fieldset>
         <legend>Choose operations</legend>
         <input
+          className="settings"
           type="checkbox"
           name="sum-check"
           id="+"
@@ -41,6 +42,7 @@ export const Settings = props => {
         <label htmlFor="sum-check">Addition</label>
         
         <input
+          className="settings"
           type="checkbox"
           name="sub-check"
           id="-"
@@ -49,6 +51,7 @@ export const Settings = props => {
         <label htmlFor="sub-check">Subtraction</label>
 
         <input
+          className="settings"
           type="checkbox"
           name="div-check"
           id="/"
@@ -57,6 +60,7 @@ export const Settings = props => {
         <label htmlFor="div-check">Division</label>
 
         <input
+          className="settings"
           type="checkbox"
           name="mult-check"
           id="*"
@@ -66,6 +70,7 @@ export const Settings = props => {
       </fieldset>
 
       <input
+          className="settings"
         type="time"
         label="time-setting"
         id="time-setting"
@@ -76,7 +81,10 @@ export const Settings = props => {
         updateTime(time);
       }}>Set time</button>
 
-      <input id="max-setting" />
+      <input
+        className="settings"
+        id="max-setting"
+      />
       <button onClick={() => {
         const max = document.getElementById('max').value;
         setMax(max);

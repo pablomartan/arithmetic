@@ -11,7 +11,7 @@ export const Game = () => {
   const [max, setMax] = useState(20);
 
   const disableInputs = () => {
-    const inputs = Array.from(document.getElementsByTagName('input'));
+    const inputs = Array.from(document.getElementsByClassName('settings'));
     if (gameOn) {
       inputs.forEach(i => i.disabled = true);
     } else {
