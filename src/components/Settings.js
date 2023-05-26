@@ -1,4 +1,5 @@
 import React from 'react';
+import { OperationFieldset } from './OperationFieldset'; 
 
 export const Settings = props => {
   const setMax = props.setMax;
@@ -29,48 +30,9 @@ export const Settings = props => {
 
   return(
     <>
-      <fieldset>
-        <legend>Choose operations</legend>
-        <input
-          className="settings"
-          type="checkbox"
-          name="sum-check"
-          id="+"
-          onClick={e => operatorCheckBoxHandler(e)}
-          defaultChecked
-        />
-        <label htmlFor="sum-check">Addition</label>
-        
-        <input
-          className="settings"
-          type="checkbox"
-          name="sub-check"
-          id="-"
-          onClick={e => operatorCheckBoxHandler(e)}
-        />
-        <label htmlFor="sub-check">Subtraction</label>
-
-        <input
-          className="settings"
-          type="checkbox"
-          name="div-check"
-          id="/"
-          onClick={e => operatorCheckBoxHandler(e)}
-        />
-        <label htmlFor="div-check">Division</label>
-
-        <input
-          className="settings"
-          type="checkbox"
-          name="mult-check"
-          id="*"
-          onClick={e => operatorCheckBoxHandler(e)}
-        />
-        <label htmlFor="sub-check">Multiplication</label>
-      </fieldset>
-
+      <OperationFieldset operators={opArr} setOperators={setOps} />
       <input
-          className="settings"
+        className="settings"
         type="time"
         label="time-setting"
         id="time-setting"
