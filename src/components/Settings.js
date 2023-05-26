@@ -4,22 +4,6 @@ import { OperationFieldset } from './OperationFieldset';
 export const Settings = props => {
   const setMax = props.setMax;
   const setTime = props.setTime;
-  const opArr = props.operators;
-  const setOps = props.setOperators;
-
-  const addOperator = op => {
-    opArr.includes(op) ? null : setOps([...opArr, op]);
-  };
-
-  const rmOperator = op => {
-    !opArr.includes(op) ? null : setOps(opArr.filter(o => o !== op));
-  };
-
-  const operatorCheckBoxHandler = e => {
-    const target = e.target;
-    const op = target.id;
-    target.checked ? addOperator(op) : rmOperator(op);
-  };
 
   const updateTime = time => {
     const split = time.split(':');
@@ -29,8 +13,8 @@ export const Settings = props => {
   };
 
   return(
-    <>
-      <OperationFieldset operators={opArr} setOperators={setOps} />
+    <div id="settings">
+      <OperationFieldset operators={props.operators} setOperators={props.setOperators} />
       <input
         className="settings"
         type="time"
@@ -51,6 +35,6 @@ export const Settings = props => {
         const max = document.getElementById('max-setting').value;
         setMax(max);
       }}>Set max. value</button>
-    </>
+    </div>
   );
 };
