@@ -24,9 +24,11 @@ export const Game = () => {
 
   return(
     <div className="game">
-      <Timer gameOn={gameOn} setGameOn={setGameOn} time={time} key={time} />
-      <h3>Max. value: {max}</h3>
-      <h3>Your score: {score}</h3>
+      <div className="stats">
+        <Timer gameOn={gameOn} setGameOn={setGameOn} time={time} key={time} />
+        <h3>Max. value: {max}</h3>
+        <h3>Your score: {score}</h3>
+      </div>
       <Settings operators={operators} setOperators={setOperators} setTime={setTime} setMax={setMax} key={max} />
       <button id="start-button" onClick={() => setGameOn(!gameOn)}>
         {gameOn ? 'Stop' : 'Start'}
