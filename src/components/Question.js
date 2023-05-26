@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import './Question.css';
+
 const randomOp = (operatorArray, max) => {
   const op = operatorArray[Math.floor(Math.random() * operatorArray.length)];
   const a = Math.round(Math.random() * (max - 1)) + 1;
@@ -39,9 +41,9 @@ export const Question = props => {
   });
 
   return(
-    <>
+    <div id="question-div">
       <p id="question">{question}</p>
       <input id="answer" onChange={e => handleInput(e)} />
-    </>
+    </div>
   );
 };
