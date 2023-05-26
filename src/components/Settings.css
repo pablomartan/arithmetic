@@ -1,0 +1,22 @@
+#settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5%;
+  border: 2px solid lightgrey;
+  padding: 2%;
+  margin: 2%;
+}
+
+#operation-selector {
+  grid-column: 1 / span 2;
+}
+
+#settings > input {
+  max-width: 80px;
+  width: fit-content;
+}
+
+#settings > * {
+  margin-left: 5px;
+}

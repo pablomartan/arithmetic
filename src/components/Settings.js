@@ -1,6 +1,8 @@
 import React from 'react';
 import { OperationFieldset } from './OperationFieldset'; 
 
+import './Settings.css';
+
 export const Settings = props => {
   const setMax = props.setMax;
   const setTime = props.setTime;
