@@ -4,6 +4,8 @@ import { Question } from './Question';
 import { Settings } from './Settings';
 import { Timer } from './Timer';
 
+import './Game.css';
+
 export const Game = () => {
   const [gameOn, setGameOn] = useState(false);
   const [operators, setOperators] = useState(['+']);

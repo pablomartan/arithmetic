@@ -1,0 +1,16 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+}
+
+#start-button {
+    width: fit-content;
+    align-self: flex-end;
+    margin-right: 2%;
+}
