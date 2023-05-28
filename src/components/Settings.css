@@ -10,6 +10,9 @@
 
 #operation-selector {
   grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #settings > input {
