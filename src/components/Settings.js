@@ -10,9 +10,9 @@ export const Settings = props => {
   const defaultTime = seconds => {
     let mins = Math.floor(seconds / 60);
     let sec = seconds % 60;
-    mins = mins < 10 ? `0${mins}` : `${mins}`;
-    sec = sec < 10 ? `0${sec}` : `${sec}`;
-    return `${mins}:${sec}`;
+    
+    return (mins < 10 ? '0'.concat(mins) : mins)
+      + ':' + (sec < 10 ? '0'.concat(sec) : sec);
   };
 
   const updateTime = time => {
