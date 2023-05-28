@@ -10,7 +10,6 @@ export const Settings = props => {
   const updateTime = time => {
     const split = time.split(':');
     const sec = parseInt(split[0]) * 60 + parseInt(split[1]);
-    console.log(sec);
     setTime(sec);
   };
 
@@ -33,7 +32,8 @@ export const Settings = props => {
         className="settings"
         id="max-setting"
       />
-      <button onClick={() => {
+      <button onClick={e => {
+        e.preventDefault();
         const max = document.getElementById('max-setting').value;
         setMax(max);
       }}>Set max. value</button>
