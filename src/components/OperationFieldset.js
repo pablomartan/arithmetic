@@ -21,7 +21,7 @@ export const OperationFieldset = props => {
   return(
     <fieldset id="operation-selector">
       <legend>Choose operations</legend>
-      <OperatorCheck name="add" id="+" handler={operatorCheckBoxHandler} checked />
+      <OperatorCheck name="add" id="+" handler={operatorCheckBoxHandler} checked={true}/>
       <OperatorCheck name="sub" id="-" handler={operatorCheckBoxHandler} />
       <OperatorCheck name="mult" id="*" handler={operatorCheckBoxHandler} />
       <OperatorCheck name="div" id="/" handler={operatorCheckBoxHandler} />
