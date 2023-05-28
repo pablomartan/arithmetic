@@ -25,8 +25,6 @@ export const Question = props => {
     setUserInput(e.target.value);
   };
 
-  console.log(props.max);
-
   useEffect(() => {
     const timeOut = setTimeout(() => {
       if (eval(question) === parseInt(userInput)) {
