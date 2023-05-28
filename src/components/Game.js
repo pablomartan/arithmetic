@@ -22,6 +22,17 @@ export const Game = () => {
     }
   };
 
+  const handleStart = () => {
+    if (!gameOn) {
+      if (score > 0) {
+        setScore(0);
+      }
+      setGameOn(true);
+    } else {
+      setGameOn(false);
+    }
+  };
+
   useEffect(() => disableInputs());
 
   return(
@@ -35,7 +46,7 @@ export const Game = () => {
         !gameOn ? <Settings operators={operators} setOperators={setOperators} setTime={setTime} setMax={setMax} key={max} />
                : null
       }
-      <button id="start-button" onClick={() => setGameOn(!gameOn)}>
+      <button id="start-button" onClick={() => handleStart()}>
         {gameOn ? 'Stop' : 'Start'}
       </button>
       {gameOn ? <Question ops={operators} max={max} score={score} setScore={setScore} /> : null}
