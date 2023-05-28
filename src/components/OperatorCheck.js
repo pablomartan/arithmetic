@@ -5,7 +5,7 @@ export const OperatorCheck = props => {
 
   return(
     <>
-      <input type="checkbox" name={name} id={id} onClick={e => clickHandler(e)} checked={checked} />
+      <input type="checkbox" name={name} id={id} onClick={e => clickHandler(e)} defaultChecked={checked} />
       <label htmlFor={name}>{name}</label>
     </>
   );
