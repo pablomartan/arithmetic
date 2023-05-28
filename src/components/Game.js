@@ -43,7 +43,7 @@ export const Game = () => {
         <h3>Your score: {score}</h3>
       </div>
       {
-        !gameOn ? <Settings operators={operators} setOperators={setOperators} setTime={setTime} setMax={setMax} key={max} />
+        !gameOn ? <Settings operators={operators} setOperators={setOperators} setTime={setTime} time={time} setMax={setMax} max={max} key={max} />
                : null
       }
       <button id="start-button" onClick={() => handleStart()}>

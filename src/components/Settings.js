@@ -7,6 +7,14 @@ export const Settings = props => {
   const setMax = props.setMax;
   const setTime = props.setTime;
 
+  const defaultTime = seconds => {
+    let mins = Math.floor(seconds / 60);
+    let sec = seconds % 60;
+    mins = mins < 10 ? `0${mins}` : `${mins}`;
+    sec = sec < 10 ? `0${sec}` : `${sec}`;
+    return `${mins}:${sec}`;
+  };
+
   const updateTime = time => {
     const split = time.split(':');
     const sec = parseInt(split[0]) * 60 + parseInt(split[1]);
@@ -21,6 +29,7 @@ export const Settings = props => {
         type="time"
         label="time-setting"
         id="time-setting"
+        defaultValue={defaultTime(props.time)}
       />
 
       <button onClick={() => {
@@ -31,6 +40,7 @@ export const Settings = props => {
       <input
         className="settings"
         id="max-setting"
+        defaultValue={props.max}
       />
       <button onClick={e => {
         e.preventDefault();
