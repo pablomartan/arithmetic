@@ -13,6 +13,10 @@ export const Timer = props => {
       }
     }, 1000);
 
+    if (!gameOn) {
+      setTimeLeft(props.time);
+    }
+
     return () => clearInterval(interval);
   });
 
