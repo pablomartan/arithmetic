@@ -20,10 +20,8 @@ button {
 .stats {
   display: flex;
   flex-direction: row;
-}
-
-#start-button {
-    width: fit-content;
-    align-self: flex-end;
-    margin-right: 2%;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  align-self: center;
 }
