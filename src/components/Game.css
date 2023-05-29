@@ -20,8 +20,36 @@ button {
 .stats {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   width: 95%;
   align-self: center;
+}
+
+.stats > * {
+  margin: 2%;
+  border: 2px solid;
+  height: inherit;
+}
+
+#timer {
+  width: 50%;
+}
+
+#score, #start-button {
+  width: 25%;
+}
+
+h3 {
+    text-align: center;
+}
+
+h3:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+h3:first-child {
+    display: inline-block;
+    vertical-align: middle;
 }
