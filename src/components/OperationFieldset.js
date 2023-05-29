@@ -5,11 +5,11 @@ export const OperationFieldset = props => {
   const [operators, setOperators] = [props.operators, props.setOperators];
 
   const addOperator = op => {
-    operators.includes(op) ? null : setOperators([...operators, op]);
+    !operators.includes(op) && setOperators([...operators, op]);
   };
 
   const rmOperator = op => {
-    !operators.includes(op) ? null : setOperators(operators.filter(o => o !== op));
+    operators.includes(op) && setOperators(operators.filter(o => o !== op));
   };
 
   const operatorCheckBoxHandler = e => {
