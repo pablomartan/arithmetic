@@ -1,12 +1,14 @@
 #question-div {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 5%;
-  max-height: 20px;
+  flex-direction: column;
 }
 
 #question {
   font-weight: bold;
+  align-self: center;
+  font-size: 3em;
+}
+
+#answer {
+  font-size: 1em;
 }
