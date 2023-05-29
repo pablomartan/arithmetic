@@ -43,13 +43,12 @@ export const Game = () => {
         <h3>Your score: {score}</h3>
       </div>
       {
-        !gameOn ? <Settings operators={operators} setOperators={setOperators} setTime={setTime} time={time} setMax={setMax} max={max} key={max} />
-               : null
+        !gameOn && <Settings operators={operators} setOperators={setOperators} setTime={setTime} time={time} setMax={setMax} max={max} key={max} />
       }
       <button id="start-button" onClick={() => handleStart()}>
         {gameOn ? 'Stop' : 'Start'}
       </button>
-      {gameOn ? <Question ops={operators} max={max} score={score} setScore={setScore} /> : null}
+      {gameOn && <Question ops={operators} max={max} score={score} setScore={setScore} />}
     </div>
   );
 };
