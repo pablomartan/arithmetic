@@ -29,8 +29,8 @@ export const Timer = props => {
   };
 
   return(
-    <div id="timer">
-      <h3>{timeInMinutes(timeLeft)}</h3>
-    </div>
+    <>
+      <h3 id="timer">{timeInMinutes(timeLeft)}</h3>
+    </>
   );
 };
