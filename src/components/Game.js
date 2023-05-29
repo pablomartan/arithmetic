@@ -41,7 +41,6 @@ export const Game = () => {
 
       <div className="stats">
         <Timer gameOn={gameOn} setGameOn={setGameOn} time={time} key={time} />
-        <h3>Max. value: {max}</h3>
         <h3>Your score: {score}</h3>
         <button id="start-button" onClick={() => handleStart()}>
           {gameOn ? 'Stop' : 'Start'}
