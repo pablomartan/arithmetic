@@ -37,15 +37,17 @@ export const Game = () => {
 
   return(
     <div className="game">
+      {!gameOn && <Settings operators={operators} setOperators={setOperators} setTime={setTime} time={time} setMax={setMax} max={max} key={max} />}
+
       <div className="stats">
         <Timer gameOn={gameOn} setGameOn={setGameOn} time={time} key={time} />
         <h3>Max. value: {max}</h3>
         <h3>Your score: {score}</h3>
+        <button id="start-button" onClick={() => handleStart()}>
+          {gameOn ? 'Stop' : 'Start'}
+        </button>
       </div>
-      {!gameOn && <Settings operators={operators} setOperators={setOperators} setTime={setTime} time={time} setMax={setMax} max={max} key={max} />}
-      <button id="start-button" onClick={() => handleStart()}>
-        {gameOn ? 'Stop' : 'Start'}
-      </button>
+
       {gameOn && <Question ops={operators} max={max} score={score} setScore={setScore} />}
     </div>
   );
