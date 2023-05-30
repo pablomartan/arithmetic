@@ -1,25 +1,46 @@
 #settings {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr;
-  grid-gap: 5%;
-  border: 2px solid lightgrey;
-  padding: 5% 2%;
-  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 40px;
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 5%;
 }
 
 #operation-selector {
-  grid-column: 1 / span 2;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 1px solid;
+  padding: 10px;
 }
 
 #settings > input {
-  max-width: 80px;
   width: fit-content;
+  max-width: 53px;
 }
 
-#settings > * {
-  margin-left: 5px;
+#settings > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
 }
+
+#time-settings {
+  border-bottom: 1px solid;
+}
+
+#max-input {
+  width: 55px;
+}
+
+/*
+ * #2B2D42
+ * #8D99AE
+ * #EDF2F4
+ * #EF233C
+ * #D80032
+ */
