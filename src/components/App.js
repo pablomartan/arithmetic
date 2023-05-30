@@ -10,7 +10,7 @@ export const App = () => {
   return(
     <>
       <Settings time={time} max={max} />
-      {/* Timer */}
+      <Timer time={time} setGameOn={setGameOn} />
       {/* Score */}
       {/* Question */}
     </>
