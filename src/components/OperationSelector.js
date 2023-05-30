@@ -7,8 +7,8 @@ export const OperationSelector = () => {
 
   return(
     <div id="operation-selector">
-      {operationLabels.map(op => {
-        return (<OperationCheckBox label={op} />);
+      {operationLabels.map((op, i) => {
+        return (<OperationCheckBox label={op} key={i} />);
       })}
     </div>
   )
