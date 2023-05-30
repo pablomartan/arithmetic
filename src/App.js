@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { Settings } from './Settings';
-import { Timer } from './Timer';
-import { Question } from './Question';
+import { Settings } from './components/Settings';
+import { Timer } from './components/Timer';
+import { Question } from './components/Question';
 
 export const App = () => {
   const [gameOn, setGameOn] = useState(false);
