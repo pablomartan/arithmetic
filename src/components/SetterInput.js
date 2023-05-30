@@ -16,6 +16,7 @@ export const SetterInput = props => {
         type={type}
         minLength='1'
         maxLength='5'
+        defaultValue={value}
       />
     </div>
   );
