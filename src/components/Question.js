@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { randomOp } from '../helperFunctions';
 
 export const Question = props => {
-  const [question, setQuestion] = useState(randomOp(props.ops, props.max));
+  const [question, setQuestion] = useState(randomOp(props.operations, props.max));
   const [userInput, setUserInput] = useState('');
   const setScore = props.setScore;
 
@@ -14,7 +14,7 @@ export const Question = props => {
   useEffect(() => {
     const timeOut = setTimeout(() => {
       if (eval(question) === parseInt(userInput)) {
-        setQuestion(randomOp(props.ops, props.max));
+        setQuestion(randomOp(props.operations, props.max));
         setUserInput('');
         document.getElementById('answer').value = '';
         setScore(score => score + 1);
