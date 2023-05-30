@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export const App = () => {
   const [gameOn, setGameOn] = useState(false);
   const [operations, setOperations] = useState(['+']);
-  const [time, setTime] = useState(300);
+  const [time, setTime] = useState(60);
   const [max, setMax] = useState(20);
   const [score, setScore] = useState(0);
 
