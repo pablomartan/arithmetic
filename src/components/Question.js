@@ -5,7 +5,7 @@ import { randomOp } from '../helperFunctions';
 export const Question = props => {
   const [question, setQuestion] = useState(randomOp(props.ops, props.max));
   const [userInput, setUserInput] = useState('');
-  const [score, setScore] = [props.score, props.setScore];
+  const setScore = props.setScore;
 
   const handleInput = e => {
     setUserInput(e.target.value);
