@@ -11,3 +11,26 @@ export const timeInMinutes = time => {
   return (mins < 10 ? '0'.concat(mins) : mins)
     + ':' + (sec < 10 ? '0'.concat(sec) : sec);
 };
+
+/**
+ * @description: returns a random operation from the given operations array, with the
+ * operands max value being determined by the max param
+ * @param {Array} operations: the avaliable operations (+, -, *, /)
+ * @param {Number} max: the maximum value, except for division, which is
+ * reversed multiplication and so can be a number up to max*max
+ *
+ * @returns {String} question: the operation to be performed by the player 
+ */
+export const randomOp = (operatorArray, max) => {
+  const op = operatorArray[Math.floor(Math.random() * operatorArray.length)];
+  const a = Math.round(Math.random() * (max - 1)) + 1;
+  const b = Math.round(Math.random() * (max - 1)) + 1;
+ 
+  /*
+   * took idea for division (reversed multiplication) from this webapp:
+   * https://arithmetic.zetamac.com/
+   */
+  return op === '/' ? ''.concat(a*b, op, b)
+                    : op === '-' && a < b ? ''.concat(b, op, a)
+                    : ''.concat(a, op, b)
+};
