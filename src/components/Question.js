@@ -26,7 +26,7 @@ export const Question = props => {
 
   return(
     <div id="question-div">
-      <p id="question">{question}</p>
+      <p id="question">{question.replace(/\*/, 'x')}</p>
       <input id="answer" onChange={e => handleInput(e)} />
     </div>
   );
