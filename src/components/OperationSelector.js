@@ -1,7 +1,7 @@
 import React from 'react';
 import { OperatorCheck } from './OperatorCheck';
 
-export const OperationFieldset = props => {
+export const OperationSelector = props => {
   const [operators, setOperators] = [props.operators, props.setOperators];
 
   const addOperator = op => {
@@ -19,12 +19,11 @@ export const OperationFieldset = props => {
   };
 
   return(
-    <fieldset id="operation-selector">
-      <legend>Choose operations</legend>
+    <div id="operation-selector">
       <OperatorCheck name="add" id="+" handler={operatorCheckBoxHandler} checked={true}/>
       <OperatorCheck name="sub" id="-" handler={operatorCheckBoxHandler} />
       <OperatorCheck name="mult" id="*" handler={operatorCheckBoxHandler} />
       <OperatorCheck name="div" id="/" handler={operatorCheckBoxHandler} />
-    </fieldset>
+    </div>
   )
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { OperationFieldset } from './OperationFieldset'; 
+import { OperationSelector } from './OperationSelector'; 
 
 import './Settings.css';
 
@@ -23,30 +23,35 @@ export const Settings = props => {
 
   return(
     <div id="settings">
-      <OperationFieldset operators={props.operators} setOperators={props.setOperators} />
-      <input
-        className="settings"
-        type="time"
-        label="time-setting"
-        id="time-setting"
-        defaultValue={defaultTime(props.time)}
-      />
+      <OperationSelector operators={props.operators} setOperators={props.setOperators} />
 
-      <button onClick={() => {
-        const time = document.getElementById('time-setting').value;
-        updateTime(time);
-      }}>Set time</button>
+      <div id="time-settings">
+        <input
+          className="settings"
+          type="time"
+          label="time-setting"
+          id="time-input"
+          defaultValue={defaultTime(props.time)}
+        />
 
-      <input
-        className="settings"
-        id="max-setting"
-        defaultValue={props.max}
-      />
-      <button onClick={e => {
-        e.preventDefault();
-        const max = document.getElementById('max-setting').value;
-        setMax(max);
-      }}>Set max. value</button>
+        <button onClick={() => {
+          const time = document.getElementById('time-setting').value;
+          updateTime(time);
+        }}>Set time</button>
+      </div>
+
+      <div id="max-settings">
+        <input
+          className="settings"
+          id="max-input"
+          defaultValue={props.max}
+        />
+        <button onClick={e => {
+          e.preventDefault();
+          const max = document.getElementById('max-setting').value;
+          setMax(max);
+        }}>Set max. value</button>
+      </div>
     </div>
   );
 };
