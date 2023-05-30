@@ -1,57 +1,16 @@
 import React from 'react';
-import { OperationSelector } from './OperationSelector'; 
 
-import './Settings.css';
+import { OperationSelector } from './OperationSelector';
+import { SetterInput } from './SetterInput';
 
 export const Settings = props => {
-  const setMax = props.setMax;
-  const setTime = props.setTime;
-
-  const defaultTime = seconds => {
-    let mins = Math.floor(seconds / 60);
-    let sec = seconds % 60;
-    
-    return (mins < 10 ? '0'.concat(mins) : mins)
-      + ':' + (sec < 10 ? '0'.concat(sec) : sec);
-  };
-
-  const updateTime = time => {
-    const split = time.split(':');
-    const sec = parseInt(split[0]) * 60 + parseInt(split[1]);
-    setTime(sec);
-  };
+  const [time, max] = [props.time, props.max];
 
   return(
-    <div id="settings">
-      <OperationSelector operators={props.operators} setOperators={props.setOperators} />
-
-      <div id="time-settings">
-        <input
-          className="settings"
-          type="time"
-          label="time-setting"
-          id="time-input"
-          defaultValue={defaultTime(props.time)}
-        />
-
-        <button onClick={() => {
-          const time = document.getElementById('time-setting').value;
-          updateTime(time);
-        }}>Set time</button>
-      </div>
-
-      <div id="max-settings">
-        <input
-          className="settings"
-          id="max-input"
-          defaultValue={props.max}
-        />
-        <button onClick={e => {
-          e.preventDefault();
-          const max = document.getElementById('max-setting').value;
-          setMax(max);
-        }}>Set max. value</button>
-      </div>
+    <div id='settings'>
+      <OperationSelector /> 
+      <SetterInput id='time' label='Set duration:' value={time} /> 
+      <SetterInput id='max'label='Set biggest value:' value={max} />
     </div>
   );
 };
