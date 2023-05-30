@@ -16,7 +16,7 @@ export const App = () => {
       <Settings time={time} max={max} />
       <Timer time={time} setGameOn={setGameOn} />
       {/* Score */}
-      <Question operations={operations} max={max} />
+      <Question operations={operations} max={max} setScore={setScore} />
     </>
   );
 };
