@@ -17,7 +17,7 @@
   padding: 10px;
 }
 
-#settings > input {
+#settings > div > input {
   width: fit-content;
   max-width: 53px;
 }
@@ -31,8 +31,4 @@
 
 #time-settings {
   border-bottom: 1px solid;
-}
-
-#max-input {
-  width: 55px;
 }
