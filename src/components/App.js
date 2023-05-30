@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+import { Settings } from './Settings';
+import { Timer } from './Timer';
+import { Question } from './Question';
+
 export const App = () => {
   const [gameOn, setGameOn] = useState(false);
   const [operations, setOperations] = useState(['+']);
@@ -12,7 +16,7 @@ export const App = () => {
       <Settings time={time} max={max} />
       <Timer time={time} setGameOn={setGameOn} />
       {/* Score */}
-      {/* Question */}
+      <Question operations={operations} max={max} />
     </>
   );
 };
