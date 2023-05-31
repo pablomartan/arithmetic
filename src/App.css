@@ -1,13 +1,13 @@
-/*
- * --imperial-red: #f94144ff;
- * --orange-crayola: #f3722cff;
- * --carrot-orange: #f8961eff;
- * --saffron: #f9c74fff;
- * --pistachio: #90be6dff;
- * --zomp: #43aa8bff;
- * --paynes-gray: #577590ff;
- * --slate-gray: #66829aff;
- */
+:root {
+ --imperial-red: #f94144ff;
+ --orange-crayola: #f3722cff;
+ --carrot-orange: #f8961eff;
+ --saffron: #f9c74fff;
+ --pistachio: #90be6dff;
+ --zomp: #43aa8bff;
+ --paynes-gray: #577590ff;
+ --slate-gray: #66829aff;
+}
 
 * {
   font-family: 'Open Sans', 'Lato', sans-serif;   
@@ -23,10 +23,8 @@
 }
 
 #start-stop {
-    --carrot-orange: #f8961eff;
-    --saffron: #f9c74fff;
-    background: var(--saffron);
-    border: 1px solid var(--carrot-orange);
+    background: var(--saffron); 
+    border: 1px solid var(--carrot-orange); 
     min-height: 30px;
     max-width: 60px;
 }
