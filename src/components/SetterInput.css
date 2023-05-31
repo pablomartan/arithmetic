@@ -1,5 +1,5 @@
 input:invalid {
-  color: var(--imperial-red);
+  color: var(--alert);
 }
 
 input {
@@ -15,6 +15,6 @@ input {
 }
 
 #time-settings {
-  border-bottom: 1px solid var(--slate-gray);
+  border-bottom: 1px solid slategray;
   border-radius: 0;
 }
