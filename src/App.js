@@ -27,6 +27,8 @@ export const App = () => {
 
       const max = inputs.filter(input => input.id == 'max-input')[0].value;
       setMax(max);
+
+      setScore(0);
     }
 
     setGameOn(!gameOn);
