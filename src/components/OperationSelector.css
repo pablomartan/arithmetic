@@ -1,0 +1,9 @@
+#operation-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #66829aff;
+  border-radius: 0;
+  margin: 4px;
+  padding: 4px;
+}

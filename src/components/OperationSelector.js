@@ -2,6 +2,8 @@ import React from 'react';
 
 import { OperationCheckBox } from './OperationCheckBox';
 
+import './OperationSelector.css';
+
 export const OperationSelector = () => {
   const operationLabels = ['Add.', 'Sub.', 'Mult.', 'Div.'];
 
