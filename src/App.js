@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Settings } from './components/Settings';
 import { Timer } from './components/Timer';
 import { Question } from './components/Question';
+import { getOperationSymbols } from './helperFunctions';
 
 export const App = () => {
   const [gameOn, setGameOn] = useState(false);
@@ -15,6 +16,13 @@ export const App = () => {
    * @description: handles the start and stop of the game
    */
   const handleStartButton = () => {
+    if (!gameOn) {
+      const inputs = Array.from(document.getElementsByTagName('input'));
+      const checkBoxes = inputs.filter(input => input.type == 'checkbox');
+      const selectedOperations = checkBoxes.filter(checkbox => checkbox.checked).map(checkbox => checkbox.id);
+      setOperations(getOperationSymbols(selectedOperations));
+    }
+
     setGameOn(!gameOn);
   };
 

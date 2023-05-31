@@ -34,3 +34,21 @@ export const randomOp = (operatorArray, max) => {
                     : op === '-' && a < b ? ''.concat(b, op, a)
                     : ''.concat(a, op, b)
 };
+
+/**
+ * @description: given an array of arithmetic operation names, returns a string
+ * with the operation symbols
+ * @param {Array} names: the names of the operations
+ *
+ * @returns {Array} an array of strings with the operation symbols
+ */
+export const getOperationSymbols = names => {
+  const lookUp = {
+    'add': '+',
+    'sub': '-',
+    'mult': '*',
+    'div': '/'
+  }
+
+  return names.map(o => lookUp(o));
+};
