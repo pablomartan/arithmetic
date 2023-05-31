@@ -13,6 +13,18 @@ export const timeInMinutes = time => {
 };
 
 /**
+ * @description: converts a string with format MM:SS to a number of seconds
+ * @param {String} time: the time to convert
+ *
+ * @returns {Number} the time in seconds
+ */
+export const timeInSeconds = time => {
+  const mins = parseInt(time.substring(0, 2));
+  const sec = parseInt(time.substring(3));
+  return mins * 60 + sec;
+};
+
+/**
  * @description: returns a random operation from the given operations array, with the
  * operands max value being determined by the max param
  * @param {Array} operations: the avaliable operations (+, -, *, /)
@@ -50,5 +62,5 @@ export const getOperationSymbols = names => {
     'div': '/'
   }
 
-  return names.map(o => lookUp(o));
+  return names.map(o => lookUp[o]);
 };

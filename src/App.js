@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Settings } from './components/Settings';
 import { Timer } from './components/Timer';
 import { Question } from './components/Question';
-import { getOperationSymbols } from './helperFunctions';
+import { getOperationSymbols, timeInSeconds } from './helperFunctions';
 
 export const App = () => {
   const [gameOn, setGameOn] = useState(false);
@@ -21,6 +21,9 @@ export const App = () => {
       const checkBoxes = inputs.filter(input => input.type == 'checkbox');
       const selectedOperations = checkBoxes.filter(checkbox => checkbox.checked).map(checkbox => checkbox.id);
       setOperations(getOperationSymbols(selectedOperations));
+
+      const time = inputs.filter(input => input.id == 'time-input')[0].value;
+      setTime(timeInSeconds(time));
     }
 
     setGameOn(!gameOn);
