@@ -38,8 +38,7 @@ html,body {
 
 #start-stop {
     background: var(--lyellow); 
-    border: 3px solid var(--dyellow);
-    height: 30px;
+    border: 3px solid var(--dyellow); 
     width: 60px;
     font-size: 1em;
 }
