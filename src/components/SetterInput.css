@@ -11,4 +11,10 @@ input {
   flex-direction: row;
   justify-content: space-between;
   max-height: 25px;
+  padding: 8px;
+}
+
+#time-settings {
+  border-bottom: 1px solid var(--slate-gray);
+  border-radius: 0;
 }
