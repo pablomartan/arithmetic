@@ -1,7 +1,3 @@
-:root {
-  --imperial-red: #f94144ff;
-}
-
 input:invalid {
   color: var(--imperial-red);
 }
