@@ -1,0 +1,22 @@
+/*
+ * --imperial-red: #f94144ff;
+ * --orange-crayola: #f3722cff;
+ * --carrot-orange: #f8961eff;
+ * --saffron: #f9c74fff;
+ * --pistachio: #90be6dff;
+ * --zomp: #43aa8bff;
+ * --paynes-gray: #577590ff;
+ * --slate-gray: #66829aff;
+ */
+
+* {
+  font-family: 'Open Sans', 'Lato', sans-serif;   
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}

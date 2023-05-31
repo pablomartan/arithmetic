@@ -5,6 +5,8 @@ import { Timer } from './components/Timer';
 import { Question } from './components/Question';
 import { getOperationSymbols, timeInSeconds } from './helperFunctions';
 
+import './App.css';
+
 export const App = () => {
   const [gameOn, setGameOn] = useState(false);
   const [operations, setOperations] = useState(['+']);
