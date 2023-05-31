@@ -11,6 +11,7 @@
 
 * {
   font-family: 'Open Sans', 'Lato', sans-serif;   
+  border-radius: 5px;
 }
 
 #root {
@@ -19,4 +20,13 @@
     align-content: center;
     justify-content: center;
     margin: auto;
+}
+
+#start-stop {
+    --carrot-orange: #f8961eff;
+    --saffron: #f9c74fff;
+    background: var(--saffron);
+    border: 1px solid var(--carrot-orange);
+    min-height: 30px;
+    max-width: 60px;
 }
