@@ -4,6 +4,8 @@ input:invalid {
 
 input {
   max-width: 53px;
+  border: 2px solid var(--dcyan);
+  padding: 4px;
 }
 
 .setter-input {
@@ -15,6 +17,6 @@ input {
 }
 
 #time-settings {
-  border-bottom: 1px solid slategray;
+  border-bottom: 2px solid var(--dcyan);
   border-radius: 0;
 }
