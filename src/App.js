@@ -24,6 +24,9 @@ export const App = () => {
 
       const time = inputs.filter(input => input.id == 'time-input')[0].value;
       setTime(timeInSeconds(time));
+
+      const max = inputs.filter(input => input.id == 'max-input')[0].value;
+      setMax(max);
     }
 
     setGameOn(!gameOn);
