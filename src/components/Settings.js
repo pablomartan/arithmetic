@@ -4,6 +4,8 @@ import { OperationSelector } from './OperationSelector';
 import { SetterInput } from './SetterInput';
 import { timeInMinutes } from '../helperFunctions';
 
+import './Settings.css';
+
 export const Settings = props => {
   const [time, max] = [props.time, props.max];
 

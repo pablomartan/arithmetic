@@ -1,0 +1,13 @@
+#settings {
+ --pistachio: #90be6dff;
+ --zomp: #43aa8bff;
+  
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px;
+  border: 1px solid var(--zomp);
+  border-radius: 5px;
+  padding: 5%;
+  background: var(--pistachio);
+}
