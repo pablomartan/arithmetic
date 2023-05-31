@@ -39,7 +39,7 @@ html,body {
 #start-stop {
     background: var(--lyellow); 
     border: 3px solid var(--dyellow); 
-    width: 60px;
+    width: 50px;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
