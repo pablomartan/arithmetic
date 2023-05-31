@@ -36,7 +36,7 @@ export const App = () => {
     <>
       {!gameOn && <Settings time={time} max={max} />}
       {gameOn && <Timer time={time} setGameOn={setGameOn} />}
-      {gameOn || score > 0 && <h3 id='score'>{score}</h3>}
+      {(gameOn || score > 0) && <h3 id='score'>{score}</h3>}
       <button id='start-stop' onClick={e => handleStartButton()}>{gameOn ? 'Stop' : 'Start'}</button>
       {gameOn && <Question operations={operations} max={max} setScore={setScore} />}
     </>
