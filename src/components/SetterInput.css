@@ -1,0 +1,18 @@
+:root {
+  --imperial-red: #f94144ff;
+}
+
+input:invalid {
+  color: var(--imperial-red);
+}
+
+input {
+  max-width: 53px;
+}
+
+.setter-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 25px;
+}

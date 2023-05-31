@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './SetterInput.css';
+
 export const SetterInput = props => {
   const [value, id, label] = [props.value, props.id, props.label];
 
@@ -19,7 +21,7 @@ export const SetterInput = props => {
   }
 
   return (
-    <div id={`${id}-settings`}>
+    <div id={`${id}-settings`} className='setter-input'>
       <label htmlFor={`${id}-input`}>
         {label}
       </label>
