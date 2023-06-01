@@ -28,7 +28,7 @@ export const Question = props => {
   return(
     <div id="question-div">
       <p id="question">{question.replace(/\*/, 'x')}</p>
-      <input id="answer" onChange={e => handleInput(e)} autoFocus />
+      <input id="answer" type="number" onChange={e => handleInput(e)} autoFocus />
     </div>
   );
 };
