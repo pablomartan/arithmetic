@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import { timeInMinutes } from '../helperFunctions';
 
+import './Timer.css';
+
 export const Timer = props => {
   const setGameOn = props.setGameOn;
   const [timeLeft, setTimeLeft] = useState(props.time);
