@@ -8,6 +8,7 @@ import { getOperationSymbols, timeInSeconds } from './helperFunctions';
 import './App.css';
 import './StartStop.css';
 import './Score.css';
+import './Stats.css';
 
 export const App = () => {
   const [gameOn, setGameOn] = useState(false);
