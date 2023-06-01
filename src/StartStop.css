@@ -1,0 +1,12 @@
+#start-stop {
+    background: var(--lyellow); 
+    border: 3px solid var(--dyellow); 
+
+    margin: 0 auto;
+    padding: 12px;
+    min-width: 80px;
+
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
