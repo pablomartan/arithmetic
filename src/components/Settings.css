@@ -17,6 +17,7 @@
 @media (600px <= width) {
   #settings {
     width: 60%;
+    height: 50%;
   }
 }
 
