@@ -19,3 +19,9 @@
     width: 60%;
   }
 }
+
+@media (900px <= width) {
+  #settings {
+    width: 40%;
+  }
+}
