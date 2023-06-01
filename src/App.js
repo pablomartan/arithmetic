@@ -39,9 +39,11 @@ export const App = () => {
   return(
     <>
       {!gameOn && <Settings time={time} max={max} />}
-      {gameOn && <Timer time={time} setGameOn={setGameOn} />}
-      {(gameOn || score > 0) && <h3 id='score'>{score}</h3>}
-      <button id='start-stop' onClick={() => handleStartButton()}>{gameOn ? 'Stop' : 'Start'}</button>
+      <div id='stats'>
+        {gameOn && <Timer time={time} setGameOn={setGameOn} />}
+        {(gameOn || score > 0) && <h3 id='score'>{score}</h3>}
+        <button id='start-stop' onClick={() => handleStartButton()}>{gameOn ? 'Stop' : 'Start'}</button>
+      </div>
       {gameOn && <Question operations={operations} max={max} setScore={setScore} />}
     </>
   );
