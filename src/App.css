@@ -29,6 +29,10 @@ html, body {
   background: #f7fcfc;
 }
 
+input {
+    font-size: inherit;
+}
+
 #root {
     display: flex;
     flex-direction: column;
