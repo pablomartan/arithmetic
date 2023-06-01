@@ -27,6 +27,6 @@
 @media (600px <= width) {
   #question-div {
     width: 60%;
-    height: 70%
+    min-height: 200px;
   }
 }
