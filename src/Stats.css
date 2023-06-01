@@ -5,6 +5,7 @@
 
     width: 80%;
     margin: auto;
+    margin-bottom: 20px;
 }
 
 @media (600px <= width) {
