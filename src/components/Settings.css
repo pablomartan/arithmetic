@@ -13,3 +13,9 @@
 
   background: var(--cyan);
 }
+
+@media (600px <= width <= 900px) {
+  #settings {
+    width: 60%;
+  }
+}
