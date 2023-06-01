@@ -1,0 +1,23 @@
+#question-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 2px solid var(--dcyan);
+    background: var(--cyan);
+
+    margin: 25% auto;
+    width: 80%;
+    height: 200px;
+}
+
+#question {
+    font-size: 2em;
+    font-weight: bold;
+    margin: auto;
+}
+
+#answer {
+    width: fit-content;
+    margin: auto;
+}

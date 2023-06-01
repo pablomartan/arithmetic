@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { randomOp } from '../helperFunctions';
+import './Question.css';
 
 export const Question = props => {
   const [question, setQuestion] = useState(randomOp(props.operations, props.max));
