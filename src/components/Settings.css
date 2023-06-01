@@ -3,7 +3,7 @@
   flex-direction: column;
 
   min-width: 80%;
-  border: 1px solid var(--dcyan);
+  border: 3px solid var(--dcyan);
   border-radius: 5px;
   padding: 5%;
   background: var(--cyan);
