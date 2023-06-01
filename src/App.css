@@ -48,16 +48,3 @@ html, body {
     font-weight: bold;
     text-align: center;
 }
-
-#score {
-    display: inline-block;
-
-    background: var(--lred);
-    border: 3px solid var(--dred);
-
-    margin: 0 auto;
-    padding: 12px;
-    width: 50px;
-
-    text-align: center;
-}
