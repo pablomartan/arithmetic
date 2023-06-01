@@ -22,6 +22,7 @@
     margin: auto;
 
     text-align: center;
+    font-size: 1.5em;
 }
 
 @media (600px <= width) {
