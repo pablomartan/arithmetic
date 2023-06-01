@@ -28,5 +28,6 @@
 @media (900px <= width) {
   #settings {
     width: 40%;
+    height: 40%;
   }
 }
