@@ -7,6 +7,8 @@
   border: 3px solid var(--dcyan);
   border-radius: 5px;
 
+  margin: 0 auto;
+  margin-bottom: 20px;
   padding: 5%;
 
   background: var(--cyan);
