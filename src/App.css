@@ -20,7 +20,7 @@
 
 html, body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 
   height: 100%;
