@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Settings } from './components/Settings';
 import { Timer } from './components/Timer';
 import { Question } from './components/Question';
-import { getOperationSymbols, timeInSeconds, validateTime } from './helperFunctions';
+import { getOperationSymbols, timeInSeconds, validateTime, validateMaxValue } from './helperFunctions';
 
 import './App.css';
 import './StartStop.css';
@@ -31,7 +31,7 @@ export const App = () => {
       validateTime(time) && setTime(timeInSeconds(time));
 
       const max = inputs.filter(input => input.id == 'max-input')[0].value;
-      setMax(max);
+      validateMaxValue(max) && setMax(max);
 
       setScore(0);
     }
