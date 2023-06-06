@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Settings } from './components/Settings';
 import { Timer } from './components/Timer';
 import { Question } from './components/Question';
+import { Instructions } from './components/Instructions';
 import { getOperationSymbols, timeInSeconds, validateTime, validateMaxValue } from './helperFunctions';
 
 import './App.css';
@@ -11,6 +12,7 @@ import './Score.css';
 import './Stats.css';
 
 export const App = () => {
+  const [firstRun, setFirstRun] = useState(true);
   const [gameOn, setGameOn] = useState(false);
   const [operations, setOperations] = useState(['+']);
   const [time, setTime] = useState(60);
@@ -41,6 +43,7 @@ export const App = () => {
 
   return(
     <>
+      {firstRun && <Instructions setFirstRun={setFirstRun}/>}
       {!gameOn && <Settings time={time} max={max} />}
       <div id='stats'>
         {gameOn && <Timer time={time} setGameOn={setGameOn} />}
