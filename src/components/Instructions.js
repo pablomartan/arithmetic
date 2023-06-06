@@ -26,9 +26,6 @@ export const Instructions = props => {
             target='_blank'>
               github</a> to see how it works.
           </li>
-          <li>
-            You'll have to close this instructions manually
-          </li>
         </ul>
       </div>
       <button onClick={() => props.setFirstRun(false)}>Close</button>
