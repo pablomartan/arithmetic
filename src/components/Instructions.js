@@ -1,12 +1,7 @@
 import React from 'react';
 
-export const Instructions = () => {
+export const Instructions = props => {
   
-  const close = () => {
-    const target = document.getElementById('instructions');
-    target.remove();
-  };
-
   return(
     <div id='instructions'>
       <div id='instr-text'>
@@ -34,7 +29,7 @@ export const Instructions = () => {
           </li>
         </ul>
       </div>
-      <button onClick={() => close()}>Close</button>
+      <button onClick={() => props.setFirstRun(false)}>Close</button>
     </div>
   );
 };
