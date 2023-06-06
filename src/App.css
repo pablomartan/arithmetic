@@ -48,7 +48,6 @@ input {
 
 @media (min-width: 1200px) {
   #root {
-    width: 75%;
     margin: auto;
   }
 }
