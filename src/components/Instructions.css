@@ -1,0 +1,22 @@
+#instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+    height: 100%;
+    padding: 2%;
+
+    text-align: justify;
+
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#instructions > button {
+  height: 60px;
+}
+
+#instr-text > ul {
+  margin-left: -20px;
+}
