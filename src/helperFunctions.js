@@ -78,3 +78,13 @@ export const validateTime = time => {
 
   return min >= 0 && min <= 60 && sec >= 0 && sec <= 60;
 };
+
+/**
+ * @description: checks if max value is valid
+ * @param {Number} num: the number introduced by the user
+ *
+ * @returns a boolean
+ */
+export const validateMaxValue = num => {
+  return num > 0;
+};
