@@ -64,3 +64,17 @@ export const getOperationSymbols = names => {
 
   return names.map(o => lookUp[o]);
 };
+
+/**
+ * @description: checks if user set time is given in the correct parameters
+ * @param {String} time: user set time
+ *
+ * @returns a boolean: false if seconds or minutes > 60, true otherwise
+ */
+export const validateTime = time => {
+  const arr = time.split(':');
+  const min = parseInt(arr[0]);
+  const sec = parseInt(arr[1]);
+
+  return min >= 0 && min <= 60 && sec >= 0 && sec <= 60;
+};
