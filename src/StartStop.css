@@ -1,16 +1,19 @@
+button {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+  margin: 0 auto;
+  padding: 12px;
+  min-width: 80px;
+  height: 100%;
+
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
 #start-stop {
     color: unset;
     background: var(--lyellow);
     border: 3px solid var(--dyellow);
 
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
-    margin: 0 auto;
-    padding: 12px;
-    min-width: 80px;
-    height: 100%;
-
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
 }
