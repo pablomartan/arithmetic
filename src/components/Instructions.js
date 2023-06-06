@@ -1,5 +1,7 @@
 import React from 'react';
 
+import style from './Instructions.css';
+
 export const Instructions = props => {
   
   return(
