@@ -14,9 +14,15 @@
 }
 
 #instructions > button {
+  background-color: var(--yellow);
+  color: black;
   height: 60px;
 }
 
 #instr-text > ul {
   margin-left: -20px;
+}
+
+li > a {
+    color: var(--alert);
 }
