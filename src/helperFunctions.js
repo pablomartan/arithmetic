@@ -42,9 +42,13 @@ export const randomOp = (operatorArray, max) => {
    * took idea for division (reversed multiplication) from this webapp:
    * https://arithmetic.zetamac.com/
    */
-  return op === '/' ? ''.concat(a*b, op, b)
-                    : op === '-' && a < b ? ''.concat(b, op, a)
-                    : ''.concat(a, op, b)
+  return op === '/'
+    ? ''.concat(a*b, op, b)
+    : op === '-' && a < b
+      ? ''.concat(b, op, a)
+        : op === undefined
+        ? ''.concat(a, '+', b)
+        : ''.concat(a, op, b)
 };
 
 /**
